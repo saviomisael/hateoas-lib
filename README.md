@@ -1,0 +1,1 @@
+### A simple hateoas library for tests purposes only
