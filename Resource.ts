@@ -1,6 +1,6 @@
 import { Link } from './Link';
 
-type ResourceInstance = {
+export type ResourceInstance = {
   [key: string]: any;
   _links: Record<string, Link>;
   getLinks: () => Record<string, Link>;
@@ -16,7 +16,6 @@ export class Resource<T> {
 
   constructor(data: T, selfUri: string) {
     Object.assign(this.resource, data);
-    this.resource._links = {};
     this.resource._links.self = { href: selfUri };
   }
 
